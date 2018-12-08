@@ -11,27 +11,32 @@
 <body>
     <h1>Course Sign Up Page</h1>
     <p>Please Note: First Name, Last Name, Password, and Email are required</p>
-    <form method="POST" action="./thankyou.html">
-        <label id = "fName">First Name:</label>
+    <form method="GET" action="./thankyou.html">
+        <label for = "fName">First Name:</label>
         <input type="text" required id="fName" placeholder="First Name">
-        <label id = "lName">Last Name:</label>
+
+        <label for = "lName">Last Name:</label>
         <input type="text" required id="lName" placeholder="Last Name">
         <p></p>
-        <label id = 'email'>Email:</label>
+        <label for = 'email'>Email:</label>
         <input type="email" required id="email" placeholder="name@email.com">
-        <label id = 'pwd'>Password:</label>
+
+        <label for = 'pwd'>Password:</label>
         <input type="password" required id = 'pwd'>
+
         <p>Are you over the age of 18?</p>
-        <label id = 'overAge'>Yes:</label>
+        <label for = 'overAge'>Yes:</label> 
         <input id="overAge" type="radio" name="age">
-        <label id = 'underAge'>No:</label>
+
+        <label for = 'underAge'>No:</label>
         <input id="underAge" type='radio' name = "age">
+
         <p>Do you have a Credit Card or PayPal?</p>
-        <select name="" id="payment">
-            <option value="ccd">Credit Card</option>
-            <option value="ppl">PayPal</option>
+        <select name="payment" id="payment">
+            <option value="cc">Credit Card</option>
+            <option value="pp">PayPal</option>
         </select>
-        <p>
+        <p></p>
         <input type="submit" value="Sign up!"> 
     </form>
 </body>
