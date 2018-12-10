@@ -1,0 +1,33 @@
+.firstDiv{
+    color:blue;
+}
+
+.secondDiv{
+    color:red;
+}
+
+#singleout{
+    color:grey;
+    text-decoration: line-through;
+}
+
+/* 
+*{
+    color: black;
+} 
+*/
+/* don't use it */
+
+h3 + ul{
+    border-color: blue;
+    border: 4px dotted;
+}
+
+li a{
+    color: red;
+}
+
+li a[href = "NPR.org"] {
+    color: green;
+    border: 1px red dotted;
+}
