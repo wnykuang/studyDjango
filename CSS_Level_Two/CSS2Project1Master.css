@@ -1,0 +1,45 @@
+h1{
+    font-family: 'Staatliches', cursive;
+    text-align: center;
+}
+
+
+#col1{
+    width: 3em;
+    border: 3em solid #247BA0;
+    background: #247BA0;
+    padding-top: 56.25%;
+}
+
+#col2{
+    width: 3em;
+    border: 3em solid #70C1B3;
+    background: #70C1B3;
+    padding-top: 56.25%;
+
+}
+
+#col3{
+    width: 3em;
+    border: 3em solid #B2DBBF;
+    background: #B2DBBF;
+    padding-top: 56.25%;
+    margin-right: 40px;
+
+}
+
+#col4{
+    width: 3em;
+    border: 3em solid #F3FFBD;
+    background: #F3FFBD;
+    padding-top: 56.25%;
+
+}
+
+#col5{
+    width: 3em;
+    border: 3em solid #FF1654;
+    background: #FF1654;
+    padding-top: 56.25%;
+}
+
