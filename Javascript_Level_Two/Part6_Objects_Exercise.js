@@ -10,7 +10,7 @@ var employee = {
   job: "Programmer",
   age: 31, 
   nameLength: function(){
-    console.log(this.name);
+    console.log(this.name.length);
   }
 }
 
