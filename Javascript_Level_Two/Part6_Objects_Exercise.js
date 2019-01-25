@@ -8,7 +8,10 @@
 var employee = {
   name: "John Smith",
   job: "Programmer",
-  age: 31
+  age: 31, 
+  nameLength: function(){
+    console.log(this.name);
+  }
 }
 
 // Add a method called nameLength that prints out the
@@ -23,7 +26,10 @@ var employee = {
 var employee = {
   name: "John Smith",
   job: "Programmer",
-  age: 31
+  age: 31,
+  printinfo: function(){
+    alert("Name is "+this.name+", Job is "+this.job+", Age is "+this.age+".");
+  }
 }
 
 // Write program that will create an Alert in the browser of each of the
@@ -41,7 +47,11 @@ var employee = {
 var employee = {
   name: "John Smith",
   job: "Programmer",
-  age: 31
+  age: 31,
+  printlastName: function(){
+    var lastName = this.name.split(' ')[1];
+    console.log("The employee's last name is "+lastName);
+  }
 }
 
 // Add a method called lastName that prints
