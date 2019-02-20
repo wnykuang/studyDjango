@@ -55,6 +55,7 @@ function checkBottom(colIndex){
 }
 
 function colorMatchCheck(one, two, three, four){
+    console.log(one, two , three , four)
     return (one===two && one===three && one===four && one!=='rgb(128, 128, 128)' && one !== undefined);
 }
 // function colorMatchCheck(one,two,three,four){
@@ -102,7 +103,7 @@ function verticalWinCheck(){
     }
 }
 
-function diagonalWinCheck(){
+function diagonalWinCheck(){//check all the diagonals.
     for (var col = 0; col < 5; col++){
         for (var row = 0; row < 7 ; row ++){
             if (colorMatchCheck(getColor(row, col), getColor(row+1, col+1), getColor(row+2, col+2), getColor(row+3, col+3))){
