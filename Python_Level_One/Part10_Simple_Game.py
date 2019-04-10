@@ -22,14 +22,39 @@
 # Here are some useful hints:
 
 # Try to figure out what this code is doing and how it might be useful to you
-import random
-digits = list(range(10))
-random.shuffle(digits)
-print(digits[:3])
-
-# Another hint:
-guess = input("What is your guess? ")
-print(guess)
-
 # Think about how you will compare the input to the random number, what format
 # should they be in? Maybe some sort of sequence? Watch the Lecture video for more hints!
+import random
+
+
+def getGuess():
+    return input("Guess it")
+
+def getAns():
+    nums = [str(i) for i in range(1, 10)]
+    random.shuffle(nums)
+    return nums[:3]    
+
+def getHints(guess, ans):
+    print(ans)
+    guess = list(guess)
+    if ans == guess:
+        return 0
+    for g, a in zip(guess, ans):
+        if a == g:
+            print("match")
+        elif a in guess:
+            print("near") 
+        else:
+            print("wrong")
+    return 1 
+
+def main(hints):
+    ans = getAns()
+    while hints != 0:
+        guess = getGuess()
+        hints = getHints(guess, ans) 
+    print("Done!")
+    return
+if __name__ == '__main__':
+    main(1)

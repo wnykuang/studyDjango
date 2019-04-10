@@ -35,6 +35,7 @@ def generate_code():
     '''
     digits = [str(num) for num in range(10)]
     random.shuffle(digits)
+    print(digits)
     return digits[:3]
 
 def generate_clues(code,userGuess):
