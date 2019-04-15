@@ -43,7 +43,7 @@ class Deck:
         self.cards = []
         for suite in SUITE:
             for rank in RANKS:
-                self.cards.add((suite, RANKS))
+                self.cards.append((suite, rank))
         self.playersCards = None
         self.compsCards = None
 
@@ -68,15 +68,43 @@ class Hand:
     This is the Hand class. Each player has a Hand, and can add or remove
     cards from that hand. There should be an add and remove card method here.
     '''
-    pass
+    def __init__(self, name):
+        self.cards = cards
+
+    def __str__(self):
+        return "Contains {} cards.".format(len(self.cards))
+
+    def add(self, commingCards):
+        self.cards.extend(commingCards)
+    
+    def removecard(self):
+        return self.cards.pop()
 
 class Player:
     """
     This is the Player class, which takes in a name and an instance of a Hand
     class object. The Payer can then play cards and check if they still have cards.
     """
-    pass
+    def __init__(self, name, hand):
+        self.name = name
+        self.hand = hand 
+    
+    def palyCard(self):
+        drawCard = self.hand.removecard()
+        print("{} has placed: {}\n".format(self.name, drawCard))
+        return drawCard
+    
+    def removeWarCards(self):
+        warCards = []
+        if len(self.hand.cards) < 3:
+            return warCards
+        else:
+            for _ in range(3):
+                warCards.append(self.hand.cards.pop())
+            return warCards
 
+    def isEnoughCards(self):
+        return len(self.hand.cards) > 0
 
 ######################
 #### GAME PLAY #######

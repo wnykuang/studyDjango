@@ -83,7 +83,7 @@ class Player:
         if len(self.hand.cards) < 3:
             return war_cards
         else:
-            for x in range(3):
+            for _ in range(3):
                 war_cards.append(self.hand.cards.pop())
             return war_cards
 
